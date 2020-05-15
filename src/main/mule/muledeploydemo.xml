@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="e0f83741-09fc-4951-8087-a2896f2b9885" >
+		<http:listener-connection host="0.0.0.0" port="${http.port}" />
+	</http:listener-config>
+	<configuration-properties doc:name="Configuration properties" doc:id="d94321c1-47d2-48df-accc-96b924f1829e" file="config.yaml" />
+	<flow name="muledeploydemoFlow" doc:id="5727db1e-5958-48c9-9be2-bba81d5758aa" >
+		<http:listener doc:name="Listener" doc:id="9a311782-2e50-4ca2-89c0-798eda6f978d" config-ref="HTTP_Listener_config" path="/test"/>
+		<set-payload value="mule deploy to cloudhub demo" doc:name="Set Payload" doc:id="e7a61e71-c437-4c9e-8bd2-28ee67711dc6" />
+	</flow>
+</mule>
