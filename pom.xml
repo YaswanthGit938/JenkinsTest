@@ -90,14 +90,6 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
-<distributionManagement>
-               
-                <repository>
-                  <id>exchange-repo</id>
-                  <name>Exchange Repository</name>
-                  <url>https://maven.anypoint.mulesoft.com/api/v1/organizations/35346880-72de-4ec8-9ddf-171c00e5f3db/maven</url>
-                  <layout>default</layout>
-                </repository>
-              </distributionManagement>
+
              
 </project>
